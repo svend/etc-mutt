@@ -1,0 +1,10 @@
+set folder=~/Maildir-uw
+set from="svends@uw.edu"
+set pgp_sign_as=0xEF6CC3C1
+set query_command="~/bin/uw-email-search '%s'"
+set smtp_url="smtp://svends@smtp.washington.edu:587/"
+# UW SMTP server's prime is too low
+set ssl_min_dh_prime_bits=512
+set spoolfile=+
+source ~/.mutt/aliases-uw
+mailboxes `find -H ~/Maildir-uw -type d -name ".*" \! -name ".junk-mail" -printf "+'%f' "`

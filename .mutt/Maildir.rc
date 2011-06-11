@@ -1,0 +1,6 @@
+set folder=~/Maildir
+set from="svend@ciffer.net"
+set postponed=+.Drafts
+set spoolfile=+
+source ~/.mutt/aliases
+mailboxes `find -H ~/Maildir -type d -name ".*" \! -name ".Drafts" \! -name ".Spam" \! -name ".Trash" -printf "+'%f' "`

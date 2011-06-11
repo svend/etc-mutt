@@ -1,0 +1,7 @@
+set folder=imap://imap.ciffer.net/
+set from="svend@ciffer.net"
+set postponed=+Drafts
+# Use local MTA
+#set smtp_url="smtp://svend@smtp.ciffer.net/"
+set spoolfile=+INBOX
+source ~/.mutt/aliases

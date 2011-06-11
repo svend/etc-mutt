@@ -1,0 +1,141 @@
+# .muttrc
+
+################################################################################
+# Preferences
+################################################################################
+
+auto_view text/html
+alternative_order text/plain text/html
+alternates "^svend\+[^@]+@ciffer\.net$" "^svend@bethanyseattle\.org$" "^(sorensen|svend)@(freeshell\.org|sdf\.lonestar\.org|sdf\.org)$" "^svends@(u\.washington\.edu|washington\.edu|uw\.edu)$" "^ssorensen@gmail.com$"
+
+unset beep
+unset confirmappend
+set certificate_file=~/.mutt/certificates
+set delete=yes
+set fast_reply=yes
+set folder=~/Maildir
+set folder_format="%2C %t %4N %f"
+set from=svend@ciffer.net
+set header_cache=~/.mutt_hcache/
+set mime_forward=ask-no
+set imap_check_subscribed=yes
+set imap_idle=yes
+set markers=no
+set pager_stop=yes
+set pgp_use_gpg_agent
+set print_command=lp
+set realname="Svend Sorensen"
+set record=!
+# Search From: and Subject: (the default) and messages I sent to To:/Cc:
+set simple_search="~f %s | ~s %s | (~P ~C %s)"
+set sort=threads
+set sort_aux=last-date-received
+set tilde=yes
+
+# Source Mutt's default gpg configuration file (from contrib/gpg.rc)
+source ~/.mutt/gpg.rc
+
+################################################################################
+# Key bindings/Macros
+################################################################################
+
+#bind alias	<space> next-page
+#bind browser	<space> next-page
+bind index	<space> next-page
+bind generic	<space> next-page
+#bind pager	<space> next-page
+bind generic	G last-entry
+bind index	G last-entry
+bind pager	G bottom
+bind index	d noop
+
+macro index,pager y <change-folder>?<toggle-mailboxes>
+
+################################################################################
+# Header weeding
+################################################################################
+
+ignore *
+unignore date from organization subject to cc reply-to RT-Ticket
+hdr_order date from organization subject to cc reply-to RT-Ticket
+
+################################################################################
+# Helper programs
+################################################################################
+
+set ispell="aspell check --mode=email"
+set editor="vim -c 'set filetype=mail'"
+
+################################################################################
+# Color
+################################################################################
+
+color normal		default default
+color attachment	yellow default
+color hdrdefault	cyan default
+color indicator		black cyan
+color markers		brightred default
+color quoted		green default
+color signature		cyan default
+color status		brightgreen blue
+color tilde		blue default
+color tree		red default
+
+################################################################################
+# Accounts
+################################################################################
+
+# Reset defaults
+account-hook . 'unset imap_user'
+account-hook . 'unset imap_pass'
+account-hook . 'unset tunnel'
+folder-hook . 'unset from'
+folder-hook . 'unset pgp_sign_as'
+folder-hook . 'set postponed=~/postponed'
+folder-hook . 'unset query_command'
+folder-hook . 'set record=^'
+folder-hook . 'unset signature'
+folder-hook . 'unset smtp_url'
+folder-hook . 'unset spoolfile'
+# UW SMTP server's prime is too low (reset)
+folder-hook . 'set ssl_starttls=yes'
+folder-hook . 'set ssl_min_dh_prime_bits=0"
+folder-hook . 'unalias *'
+
+# Local
+mailboxes ~/Maildir
+folder-hook ~/Maildir($|/) 'source ~/.mutt/Maildir.rc'
+
+# Local
+mailboxes ~/Maildir-uw
+folder-hook ~/Maildir-uw($|/) 'source ~/.mutt/Maildir-uw.rc'
+
+# ciffer.net
+mailboxes imaps://svend@imap.ciffer.net/INBOX
+folder-hook imaps://svend@imap.ciffer.net 'source ~/.mutt/imaps_svend@imap.ciffer.net.rc'
+
+# ciffer.net (IMAP over SSH)
+mailboxes imap://imap.ciffer.net/INBOX
+account-hook imap://imap.ciffer.net 'set tunnel="ssh imap.ciffer.net"'
+folder-hook imap://imap.ciffer.net 'source ~/.mutt/imap_svend@imap.ciffer.net.rc'
+
+# SDF
+mailboxes imaps://svend@mail.freeshell.org/INBOX
+folder-hook imaps://svend@mail.freeshell.org 'set folder=imaps://svend@mail.freeshell.org/'
+# SDF's SMTP server is subscriber only
+#folder-hook imaps://svend@mail.freeshell.org 'set from="svend@freeshell.org"'
+#folder-hook imaps://svend@mail.freeshell.org 'set smtp_url="smtps://svend@smtp.freeshell.org/"'
+folder-hook imaps://svend@mail.freeshell.org 'set spoolfile=+INBOX'
+folder-hook imaps://svend@mail.freeshell.org 'source ~/.mutt/aliases'
+
+# UW
+mailboxes imaps://svends@svends.deskmail.washington.edu/INBOX
+folder-hook imaps://svends@svends.deskmail.washington.edu 'source ~/.mutt/imaps_svends@svends.deskmail.washington.edu.rc'
+
+# UW Gmail
+mailboxes imaps://svends@uw.edu@imap.gmail.com/INBOX
+folder-hook imaps://svends@uw.edu@imap.gmail.com 'set folder=imaps://svends@uw.edu@imap.gmail.com/'
+folder-hook imaps://svends@uw.edu@imap.gmail.com 'set from="svends@uw.edu"'
+folder-hook imaps://svends@uw.edu@imap.gmail.com 'set smtp_url="smtps://svends@uw.edu@smtp.gmail.com/"'
+folder-hook imaps://svends@uw.edu@imap.gmail.com 'set spoolfile=+INBOX'
+folder-hook imaps://svends@uw.edu@imap.gmail.com 'source ~/.mutt/aliases-uw'
