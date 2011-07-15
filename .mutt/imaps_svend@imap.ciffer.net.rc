@@ -3,4 +3,3 @@ set from="svend@ciffer.net"
 set smtp_url="smtp://svend@smtp.ciffer.net/"
 set postponed=+Drafts
 set spoolfile=+INBOX
-source ~/.mutt/aliases

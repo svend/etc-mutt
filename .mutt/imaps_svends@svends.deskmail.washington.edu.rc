@@ -6,4 +6,3 @@ set smtp_url="smtp://svends@smtp.washington.edu:587/"
 set spoolfile=imaps://svends@svends.deskmail.washington.edu/INBOX
 # UW SMTP server's prime is too low
 set ssl_min_dh_prime_bits=512
-source ~/.mutt/aliases-uw
