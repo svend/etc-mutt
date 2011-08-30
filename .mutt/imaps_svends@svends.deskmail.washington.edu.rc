@@ -1,6 +1,6 @@
 set folder=imaps://svends@svends.deskmail.washington.edu/mail
 set from="svends@uw.edu"
-set pgp_sign_as=0xEF6CC3C1
+set pgp_sign_as=0xE469F0DC
 set query_command="~/bin/mutt-uw-search '%s'"
 set smtp_url="smtp://svends@smtp.washington.edu:587/"
 set spoolfile=imaps://svends@svends.deskmail.washington.edu/INBOX

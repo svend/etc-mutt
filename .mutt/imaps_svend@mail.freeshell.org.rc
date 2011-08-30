@@ -1,0 +1,5 @@
+set folder=imaps://svend@mail.freeshell.org/
+# SDF's SMTP server is subscriber only
+#set from="svend@freeshell.org"
+#set smtp_url="smtps://svend@smtp.freeshell.org/"
+set spoolfile=+INBOX

@@ -1,0 +1,4 @@
+set folder=imaps://svends@uw.edu@imap.gmail.com/
+set from="svends@uw.edu"
+set smtp_url="smtps://svends@uw.edu@smtp.gmail.com/"
+set spoolfile=+INBOX

@@ -121,12 +121,7 @@ folder-hook imap://imap.ciffer.net 'source ~/.mutt/imap_svend@imap.ciffer.net.rc
 
 # SDF
 mailboxes imaps://svend@mail.freeshell.org/INBOX
-folder-hook imaps://svend@mail.freeshell.org 'set folder=imaps://svend@mail.freeshell.org/'
-# SDF's SMTP server is subscriber only
-#folder-hook imaps://svend@mail.freeshell.org 'set from="svend@freeshell.org"'
-#folder-hook imaps://svend@mail.freeshell.org 'set smtp_url="smtps://svend@smtp.freeshell.org/"'
-folder-hook imaps://svend@mail.freeshell.org 'set spoolfile=+INBOX'
-folder-hook imaps://svend@mail.freeshell.org 'source ~/.mutt/aliases'
+folder-hook imaps://svend@mail.freeshell.org 'source imaps_svend@mail.freeshell.org.rc'
 
 # UW
 mailboxes imaps://svends@svends.deskmail.washington.edu/INBOX
@@ -134,8 +129,8 @@ folder-hook imaps://svends@svends.deskmail.washington.edu 'source ~/.mutt/imaps_
 
 # UW Gmail
 mailboxes imaps://svends@uw.edu@imap.gmail.com/INBOX
-folder-hook imaps://svends@uw.edu@imap.gmail.com 'set folder=imaps://svends@uw.edu@imap.gmail.com/'
-folder-hook imaps://svends@uw.edu@imap.gmail.com 'set from="svends@uw.edu"'
-folder-hook imaps://svends@uw.edu@imap.gmail.com 'set smtp_url="smtps://svends@uw.edu@smtp.gmail.com/"'
-folder-hook imaps://svends@uw.edu@imap.gmail.com 'set spoolfile=+INBOX'
-folder-hook imaps://svends@uw.edu@imap.gmail.com 'source ~/.mutt/aliases-uw'
+folder-hook imaps://svends@uw.edu@imap.gmail.com 'source ~/.mutt/imaps_svends@uw.edu@imap.gmail.com.rc'
+
+# Save messages sent to mailing lists to incoming mailbox
+# This must come after the accounts, where the spoolfile is set
+folder-hook ^list-* 'set record=!'
