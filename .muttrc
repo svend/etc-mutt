@@ -97,9 +97,6 @@ folder-hook . 'set record=^'
 folder-hook . 'unset signature'
 folder-hook . 'unset smtp_url'
 folder-hook . 'unset spoolfile'
-# UW SMTP server's prime is too low (reset)
-folder-hook . 'set ssl_starttls=yes'
-folder-hook . 'set ssl_min_dh_prime_bits=0'
 folder-hook . 'unalias *'
 
 # Local
