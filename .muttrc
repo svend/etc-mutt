@@ -113,7 +113,7 @@ folder-hook imaps://svend@imap.ciffer.net 'source ~/.mutt/imaps_svend@imap.ciffe
 
 # ciffer.net (IMAP over SSH)
 mailboxes imap://imap.ciffer.net/INBOX
-account-hook imap://imap.ciffer.net 'set tunnel="ssh imap.ciffer.net"'
+account-hook imap://imap.ciffer.net 'set tunnel="ssh imap.ciffer.net MAIL=\$HOME/Maildir /usr/lib/dovecot/imap --exec-mail imap"'
 folder-hook imap://imap.ciffer.net 'source ~/.mutt/imap_svend@imap.ciffer.net.rc'
 
 # SDF
