@@ -6,7 +6,7 @@
 
 auto_view text/html
 alternative_order text/plain text/html
-alternates "^svend\+[^@]+@ciffer\.net$" "^svend@bethanyseattle\.org$" "^(sorensen|svend)@(freeshell\.org|sdf\.lonestar\.org|sdf\.org)$" "^svends@(u\.washington\.edu|washington\.edu|uw\.edu)$" "^ssorensen@gmail.com$"
+alternates "^svend\+[^@]+@ciffer\.net$" "^(sorensen|svend)@(freeshell\.org|sdf\.lonestar\.org|sdf\.org)$" "^svends@(u\.washington\.edu|washington\.edu|uw\.edu)$" "^ssorensen@gmail.com$"
 
 unset beep
 unset confirmappend
