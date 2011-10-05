@@ -3,4 +3,5 @@ set from="svend@ciffer.net"
 set postponed=+Drafts
 # Use local MTA
 #set smtp_url="smtp://svend@smtp.ciffer.net/"
+set sendmail="ssh smtp.ciffer.net /usr/sbin/sendmail -oem -oi"
 set spoolfile=+INBOX
