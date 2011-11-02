@@ -91,15 +91,18 @@ folder-hook . 'source ~/.mutt/accounts/default/folder.rc'
 
 # Local
 mailboxes ~/Maildir
-folder-hook ~/Maildir($|/) 'source ~/.mutt/accounts/Maildir.rc'
+account-hook ~/Maildir($|/) 'source ~/.mutt/accounts/Maildir/account.rc'
+folder-hook ~/Maildir($|/) 'source ~/.mutt/accounts/Maildir/folder.rc'
 
 # Local
 mailboxes ~/Maildir-uw
-folder-hook ~/Maildir-uw($|/) 'source ~/.mutt/accounts/Maildir-uw.rc'
+account-hook ~/Maildir-uw($|/) 'source ~/.mutt/accounts/Maildir-uw/account.rc'
+folder-hook ~/Maildir-uw($|/) 'source ~/.mutt/accounts/Maildir-uw/folder.rc'
 
 # ciffer.net
 mailboxes imaps://svend@imap.ciffer.net/INBOX
-folder-hook imaps://svend@imap.ciffer.net 'source ~/.mutt/accounts/imaps_svend@imap.ciffer.net.rc'
+account-hook imaps://svend@imap.ciffer.net 'source ~/.mutt/accounts/imaps_svend@imap.ciffer.net/account.rc'
+folder-hook imaps://svend@imap.ciffer.net 'source ~/.mutt/accounts/imaps_svend@imap.ciffer.net/folder.rc'
 
 # ciffer.net (IMAP over SSH)
 mailboxes imap://imap.ciffer.net/INBOX
@@ -113,10 +116,12 @@ folder-hook imaps://svend@ciffer.net@imap.gmail.com 'source ~/.mutt/accounts/ima
 
 # UW
 mailboxes imaps://svends@svends.deskmail.washington.edu/INBOX
+account-hook imaps://svends@svends.deskmail.washington.edu 'source ~/.mutt/accounts/imaps_svends@svends.deskmail.washington.edu/account.rc'
 folder-hook imaps://svends@svends.deskmail.washington.edu 'source ~/.mutt/accounts/imaps_svends@svends.deskmail.washington.edu/folder.rc'
 
 # UW Gmail
 mailboxes imaps://svends@uw.edu@imap.gmail.com/INBOX
+account-hook imaps://svends@uw.edu@imap.gmail.com 'source ~/.mutt/accounts/imaps_svends@uw.edu@imap.gmail.com/account.rc'
 folder-hook imaps://svends@uw.edu@imap.gmail.com 'source ~/.mutt/accounts/imaps_svends@uw.edu@imap.gmail.com/folder.rc'
 
 # Save messages sent to mailing lists to incoming mailbox
