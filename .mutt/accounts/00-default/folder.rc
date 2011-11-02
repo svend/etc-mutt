@@ -1,10 +1,10 @@
 unset from
 unset pgp_sign_as
-set postponed=~/postponed
-unset query_command
+reset postponed
+reset query_command
 set record=^
-set sendmail="/usr/sbin/sendmail -oem -oi"
+reset sendmail
 unset signature
 unset smtp_url
-unset spoolfile
+reset spoolfile
 unalias *
