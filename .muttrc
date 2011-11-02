@@ -117,6 +117,10 @@ mailboxes imap://imap.ciffer.net/INBOX
 account-hook imap://imap.ciffer.net 'set tunnel="ssh imap.ciffer.net MAIL=\$HOME/Maildir /usr/lib/dovecot/imap --exec-mail imap"'
 folder-hook imap://imap.ciffer.net 'source ~/.mutt/imap_svend@imap.ciffer.net.rc'
 
+# ciffer.net Gmail
+mailboxes imaps://svend@ciffer.net@imap.gmail.com/INBOX
+folder-hook imaps://svend@ciffer.net@imap.gmail.com 'source ~/.mutt/imaps_svends@uw.edu@imap.gmail.com.rc'
+
 # SDF
 mailboxes imaps://svend@mail.freeshell.org/INBOX
 folder-hook imaps://svend@mail.freeshell.org 'source imaps_svend@mail.freeshell.org.rc'

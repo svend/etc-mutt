@@ -1,0 +1,4 @@
+set folder=imaps://svend@ciffer.net@imap.gmail.com/
+set from="svend@ciffer.net"
+set smtp_url="smtps://svend@ciffer.net@smtp.gmail.com/"
+set spoolfile=+INBOX
