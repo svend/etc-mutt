@@ -8,8 +8,8 @@ auto_view text/html
 alternative_order text/plain text/html
 alternates "^svend\+[^@]+@ciffer\.net$" "^svends\+[^@]+@(u\.washington\.edu|washington\.edu|uw\.edu)$"
 
-unset beep
-unset confirmappend
+set no beep
+set no confirmappend
 set certificate_file=~/.mutt/certificates
 set delete=yes
 set fast_reply=yes
