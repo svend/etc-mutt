@@ -86,38 +86,38 @@ color tree		red default
 ################################################################################
 
 # Reset defaults
-account-hook . 'source ~/.mutt/default/account.rc'
-folder-hook . 'source ~/.mutt/default/folder.rc'
+account-hook . 'source ~/.mutt/accounts/default/account.rc'
+folder-hook . 'source ~/.mutt/accounts/default/folder.rc'
 
 # Local
 mailboxes ~/Maildir
-folder-hook ~/Maildir($|/) 'source ~/.mutt/Maildir.rc'
+folder-hook ~/Maildir($|/) 'source ~/.mutt/accounts/Maildir.rc'
 
 # Local
 mailboxes ~/Maildir-uw
-folder-hook ~/Maildir-uw($|/) 'source ~/.mutt/Maildir-uw.rc'
+folder-hook ~/Maildir-uw($|/) 'source ~/.mutt/accounts/Maildir-uw.rc'
 
 # ciffer.net
 mailboxes imaps://svend@imap.ciffer.net/INBOX
-folder-hook imaps://svend@imap.ciffer.net 'source ~/.mutt/imaps_svend@imap.ciffer.net.rc'
+folder-hook imaps://svend@imap.ciffer.net 'source ~/.mutt/accounts/imaps_svend@imap.ciffer.net.rc'
 
 # ciffer.net (IMAP over SSH)
 mailboxes imap://imap.ciffer.net/INBOX
-account-hook imap://imap.ciffer.net 'source ~/.mutt/imap_svend@imap.ciffer.net/account.rc'
-folder-hook imap://imap.ciffer.net 'source ~/.mutt/imap_svend@imap.ciffer.net/folder.rc'
+account-hook imap://imap.ciffer.net 'source ~/.mutt/accounts/imap_svend@imap.ciffer.net/account.rc'
+folder-hook imap://imap.ciffer.net 'source ~/.mutt/accounts/imap_svend@imap.ciffer.net/folder.rc'
 
 # ciffer.net Gmail
 mailboxes imaps://svend@ciffer.net@imap.gmail.com/INBOX
-account-hook imaps://svend@ciffer.net@imap.gmail.com 'source ~/.mutt/imaps_svend@ciffer.net@imap.gmail.com/account.rc'
-folder-hook imaps://svend@ciffer.net@imap.gmail.com 'source ~/.mutt/imaps_svend@ciffer.net@imap.gmail.com/folder.rc'
+account-hook imaps://svend@ciffer.net@imap.gmail.com 'source ~/.mutt/accounts/imaps_svend@ciffer.net@imap.gmail.com/account.rc'
+folder-hook imaps://svend@ciffer.net@imap.gmail.com 'source ~/.mutt/accounts/imaps_svend@ciffer.net@imap.gmail.com/folder.rc'
 
 # UW
 mailboxes imaps://svends@svends.deskmail.washington.edu/INBOX
-folder-hook imaps://svends@svends.deskmail.washington.edu 'source ~/.mutt/imaps_svends@svends.deskmail.washington.edu/folder.rc'
+folder-hook imaps://svends@svends.deskmail.washington.edu 'source ~/.mutt/accounts/imaps_svends@svends.deskmail.washington.edu/folder.rc'
 
 # UW Gmail
 mailboxes imaps://svends@uw.edu@imap.gmail.com/INBOX
-folder-hook imaps://svends@uw.edu@imap.gmail.com 'source ~/.mutt/imaps_svends@uw.edu@imap.gmail.com/folder.rc'
+folder-hook imaps://svends@uw.edu@imap.gmail.com 'source ~/.mutt/accounts/imaps_svends@uw.edu@imap.gmail.com/folder.rc'
 
 # Save messages sent to mailing lists to incoming mailbox
 # This must come after the accounts, where the spoolfile is set
