@@ -6,7 +6,6 @@
 
 auto_view text/html
 alternative_order text/plain text/html
-alternates "^svend\+[^@]+@ciffer\.net$" "^svends\+[^@]+@(u\.washington\.edu|washington\.edu|uw\.edu)$"
 
 set no beep
 set no confirmappend
@@ -15,7 +14,6 @@ set delete=yes
 set fast_reply=yes
 set folder=~/Maildir
 set folder_format="%2C %t %4N %f"
-set from=svend@ciffer.net
 set header_cache=~/.var/mutt/hcache/
 set mime_forward=ask-no
 set imap_check_subscribed=yes
@@ -24,7 +22,6 @@ set markers=no
 set pager_stop=yes
 set pgp_use_gpg_agent
 set print_command=lp
-set realname="Svend Sorensen"
 set record=!
 # Search From: and Subject: (the default) and messages I sent to To:/Cc:
 set simple_search="~f %s | ~s %s | (~P ~C %s)"

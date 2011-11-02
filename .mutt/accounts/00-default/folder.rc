@@ -1,7 +1,10 @@
-unset from
+alternates "^svend\+[^@]+@ciffer\.net$" "^svends\+[^@]+@(u\.washington\.edu|washington\.edu|uw\.edu)$"
+
+set from=svend@ciffer.net
 unset pgp_sign_as
 reset postponed
 reset query_command
+set realname="Svend Sorensen"
 set record=^
 reset sendmail
 unset signature
