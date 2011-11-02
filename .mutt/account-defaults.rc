@@ -1,0 +1,3 @@
+unset imap_user
+unset imap_pass
+unset tunnel

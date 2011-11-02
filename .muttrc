@@ -86,19 +86,8 @@ color tree		red default
 ################################################################################
 
 # Reset defaults
-account-hook . 'unset imap_user'
-account-hook . 'unset imap_pass'
-account-hook . 'unset tunnel'
-folder-hook . 'unset from'
-folder-hook . 'unset pgp_sign_as'
-folder-hook . 'set postponed=~/postponed'
-folder-hook . 'unset query_command'
-folder-hook . 'set record=^'
-folder-hook . 'set sendmail="/usr/sbin/sendmail -oem -oi"'
-folder-hook . 'unset signature'
-folder-hook . 'unset smtp_url'
-folder-hook . 'unset spoolfile'
-folder-hook . 'unalias *'
+account-hook . 'source ~/.mutt/account-defaults.rc'
+folder-hook . 'source ~/.mutt/folder-defaults.rc'
 
 # Local
 mailboxes ~/Maildir
