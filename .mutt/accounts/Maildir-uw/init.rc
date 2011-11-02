@@ -1,0 +1,3 @@
+# Local
+mailboxes ~/Maildir-uw
+set my_account=~/Maildir-uw($|/)

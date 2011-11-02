@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+for d in ~/.mutt/accounts/*; do
+	if [ -f $d/init.rc ]; then
+		cat $d/init.rc
+		echo "account-hook \$my_account 'source $d/account.rc'"
+		echo "folder-hook \$my_account 'source $d/folder.rc'"
+		echo "unset my_account"
+	fi
+done

@@ -1,0 +1,3 @@
+# ciffer.net (IMAP over SSH)
+mailboxes imap://imap.ciffer.net/INBOX
+set my_account=imap://imap.ciffer.net

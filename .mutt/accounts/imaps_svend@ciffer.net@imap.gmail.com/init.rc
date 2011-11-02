@@ -1,0 +1,3 @@
+# ciffer.net Gmail
+mailboxes imaps://svend@ciffer.net@imap.gmail.com/INBOX
+set my_account=imaps://svend@ciffer.net@imap.gmail.com
