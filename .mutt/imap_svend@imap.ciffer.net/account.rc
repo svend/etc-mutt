@@ -1,0 +1,1 @@
+set tunnel="ssh imap.ciffer.net MAIL=\$HOME/Maildir /usr/lib/dovecot/imap --exec-mail imap"

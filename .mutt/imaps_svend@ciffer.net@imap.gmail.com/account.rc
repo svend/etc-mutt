@@ -1,0 +1,1 @@
+#set imap_pass=`gpg -dq ~/mutt-gmail-pass.gpg`
