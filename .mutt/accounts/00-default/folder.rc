@@ -1,4 +1,4 @@
-alternates "^svend\+[^@]+@ciffer\.net$" "^svends\+[^@]+@(u\.washington\.edu|washington\.edu|uw\.edu)$"
+alternates "^svend(\\+[^@]+)?@ciffer\.net$" "^svends(\\+[^@]+)?@(u\.washington\.edu|washington\.edu|uw\.edu)$"
 
 set from=svend@ciffer.net
 unset pgp_sign_as
