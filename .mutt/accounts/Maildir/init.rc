@@ -1,3 +1,0 @@
-# Local
-mailboxes ~/Maildir
-set my_account=~/Maildir($|/)

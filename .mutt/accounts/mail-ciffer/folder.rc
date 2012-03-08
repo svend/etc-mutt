@@ -1,0 +1,5 @@
+set folder=~/mail/ciffer
+set from="svend@ciffer.net"
+set postponed=+.Drafts
+set spoolfile=+
+mailboxes `find -H ~/mail/ciffer -type d -name ".*" \! -name ".git" \! -name ".notmuch" \! -name ".Drafts" \! -name ".Spam" \! -name ".Trash" -printf "+'%f' "`

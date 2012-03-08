@@ -12,7 +12,7 @@ set no confirmappend
 set certificate_file=~/.mutt/certificates
 set delete=yes
 set fast_reply=yes
-set folder=~/Maildir
+set folder=~/mail/ciffer
 set folder_format="%2C %t %4N %f"
 set header_cache=~/.cache/mutt/hcache/
 set mime_forward=ask-no
