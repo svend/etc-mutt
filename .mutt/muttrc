@@ -27,6 +27,7 @@ set record=!
 set simple_search="~f %s | ~s %s | (~P ~C %s)"
 set sort=threads
 set sort_aux=last-date-received
+set spoolfile=~/mail/ciffer
 set tilde=yes
 
 ################################################################################
